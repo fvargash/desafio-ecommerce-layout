@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e9ecf4;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 12fr 1fr;
+    
+    grid-template-areas: "header      header"
+                         "sidebar-fluid   contenido"
+                         "sidebar-fluid   contenido"
+                         "footer      footer";
+}
+
+.container > div,
+.container .header,
+.container .contenido,
+.container .sidebar-fluid,
+.container .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.container .header {
+    background: #c15a06;
+    color: #fff;
+    grid-area: header;
+    text-align: center;
+    max-height: 20px;
+}
+
+.container .contenido {
+    grid-area: contenido;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    max-width: 300px;
+    max-height: 400px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contenido img {
+    width: 300px;
+    height: 200px;
+}
+
+.contenido p,h1,button {
+    margin: 5px;
+    padding: 5px;
+}
+
+.contenido button {
+    background-color: #12203e;
+    color: #fff;
+    width: 100%;
+    margin: auto;
+
+}
+
+.contenido button:hover {
+    background-color: #12203e;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.container .sidebar-fluid {    
+
+    grid-area: sidebar-fluid;
+    background-color:#fff;
+}
+
+ul {
+    list-style: none;
+    width: 100vh;
+    max-width: 150px;
+    background-color: #fff;
+    color: #c15a06;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+    color:#c15a06;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;    
+}
+
+li a:hover {
+    background-color: #c15a06;    
+    color: #fff;
+}
+
+li a .active {
+    background-color: #c15a06;
+    color: #fff;
+}
+
+.container .footer {
+    background: #12203e;
+    color: #fff;
+    text-align: center;
+    font-size: large;
+
+    grid-area: footer;
+}
